@@ -1,0 +1,12 @@
+<!doctype html><html lang="fa" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1018"><link rel="manifest" href="manifest.webmanifest"><title>V2RayNG Panel</title><link rel="stylesheet" href="style.css">
+</head><body><div id="app">
+<header class="top"><div class="logo">V2RayNG <i>Panel</i></div><button id="theme">☾</button></header>
+<main>
+<section id="home" class="screen active"><div class="hero"><div class="badge">CONFIG MANAGER</div><h1>پنل ساخت کانفیگ</h1><p>ساخت و مدیریت لینک‌های سازگار با v2rayNG</p><button class="big" onclick="go('builder')">＋ ساخت کانفیگ جدید</button></div>
+<div class="stats"><div><strong id="count">0</strong><span>ذخیره شده</span></div><div><strong>3</strong><span>پروتکل</span></div><div><strong>24/7</strong><span>دسترسی پنل</span></div></div></section>
+<section id="builder" class="screen"><h2>ساخت کانفیگ</h2><div class="box"><div class="row"><label>نام<input id="name" placeholder="My Config"></label><label>پروتکل<select id="protocol"><option>VLESS</option><option>VMess</option><option>Trojan</option></select></label></div><div class="row"><label>آدرس سرور<input id="host" placeholder="example.com"></label><label>پورت<input id="port" value="443" type="number"></label></div><div class="row"><label>UUID / Password<input id="id" placeholder="UUID یا رمز"></label><label>SNI<input id="sni" placeholder="example.com"></label></div><div class="row"><label>Network<select id="network"><option value="tcp">TCP</option><option value="ws">WebSocket</option><option value="grpc">gRPC</option></select></label><label>Security<select id="security"><option value="tls">TLS</option><option value="none">None</option></select></label></div><div class="row"><label>Path<input id="path" value="/"></label><label>Service Name<input id="service" placeholder="grpc"></label></div>
+<button class="big" id="make">ساخت لینک</button><div class="output"><input id="out" readonly placeholder="لینک اینجا قرار می‌گیرد"><button id="copy">کپی</button></div><div class="actions"><button id="save">ذخیره کانفیگ</button><button id="clear">پاک کردن</button></div></div></section>
+<section id="saved" class="screen"><h2>کانفیگ‌های من</h2><div class="box" id="list"></div></section></main>
+<nav><button onclick="go('home')">⌂<small>خانه</small></button><button onclick="go('builder')">＋<small>ساخت</small></button><button onclick="go('saved')">☷<small>ذخیره‌ها</small></button></nav></div><script src="app.js"></script></body></html>
